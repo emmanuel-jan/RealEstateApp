@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js  "></script>
     <script src="js/all.js"></script>
+    <script src="js/main.js"></script>
     <title>Sign Up</title>
 </head>
 <body class="bg-light">
@@ -29,10 +31,10 @@
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
             </ul>
-            <div>
-                <a class="btn btn-danger" href="logIn.html">Login</a>
-                <a class="btn btn-danger active" href="signUp.html">Sign Up</a>
-            </div>
+            <div class="ms-auto">
+              <a class="btn btn-outline-light" href="logIn.html">Login</a>
+              <a class="btn btn-outline-warning active" href="signUp.html">Sign up</a>
+          </div>
           </div>
         </div>
     </nav>
@@ -44,30 +46,36 @@
                 <h4 class="text-danger text-center" >Sign Up for an Account</h4>
             </div>
             <div class="card-body">
-                <form class="row g-3">
+                <form id="signUp_form" onsubmit="return false" class="row g-3">
                     <div class="col-md-6">
                         <label class="form-label">First Name</label>
                         <input type="text" class="form-control" id="firstName" placeholder="John">
+                        <small id="firstName_error" class="form-text text-muted"></small>
                     </div>
                     <div class="col-md-6">
-                    <label class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Doe">
+                      <label class="form-label">Last Name</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="Doe">
+                      <small id="lastName_error" class="form-text text-muted"></small>
                     </div>
                     <div class="col-md-6">
                       <label class="form-label">Email</label>
                       <input type="email" class="form-control" id="email" placeholder="email@email.com">
+                      <small id="email_error" class="form-text text-muted"></small>
                     </div>
                     <div class="col-md-6">
                         <label for="inputAddress" class="form-label">Phone Number</label>
-                        <input type="number" class="form-control" id="inputAddress" placeholder="+(254) 7-00-500-777">
+                        <input type="number" class="form-control" id="phoneNumber" placeholder="+(254) 7-00-500-777">
+                        <small id="phoneNumber_error" class="form-text text-muted"></small>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" placeholder="************">
-                      </div>
+                        <small id="password_error" class="form-text text-muted"></small>
+                    </div>
                     <div class="col-md-6">
                       <label class="form-label">Confirm Password</label>
                       <input type="password" class="form-control" id="confirmPassword" placeholder="************">
+                      <small id="confirmPassword_error" class="form-text text-muted"></small>
                     </div>
                    
                     <div class="col-12">
